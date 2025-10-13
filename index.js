@@ -44,6 +44,23 @@ inputext.addEventListener("keydown" ,function(e){
     }
 })
 
+inputext.addEventListener("touchstart",(e)=>{
+    if(e.key=="Enter"){
+        searchcity()
+    }
+});
+
+
+inputext.addEventListener("touchstart",(e)=>{
+    if(e.key>="0" && e.key<="9"){
+          e.preventDefault()
+        inputext.style.backgroundColor="red"
+    }else{
+        inputext.style.backgroundColor=" rgb(143, 25, 108)"
+    }
+    
+});
+
 function writedata(airspeed,maxdeg,mindeg,hum,climatetype,temp ,desc,icon){
 wind.innerHTML=airspeed + "km/h"
 city.innerHTML=inputext.value.trim()
