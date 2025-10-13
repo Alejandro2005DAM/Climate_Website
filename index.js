@@ -44,22 +44,20 @@ inputext.addEventListener("keydown" ,function(e){
     }
 })
 
-inputext.addEventListener("touchstart",(e)=>{
-    if(e.key=="Enter"){
-        searchcity()
-    }
-});
 
-
-inputext.addEventListener("touchstart",(e)=>{
-    if(e.key>="0" && e.key<="9"){
-          e.preventDefault()
-        inputext.style.backgroundColor="red"
+inputext.addEventListener("input",(e)=>{
+    const value=inputext.value
+    const lastchar= value[value.length-1]
+    if(lastchar>="0" && lastchar<="9"){
+          inputext.value=inputext.value.slice(0,-1)
+          inputext.style.backgroundColor="red"
     }else{
-        inputext.style.backgroundColor=" rgb(143, 25, 108)"
+        
+        inputext.style.backgroundColor("rgb(143, 25, 108)")
+            
+      
     }
-    
-});
+})
 
 function writedata(airspeed,maxdeg,mindeg,hum,climatetype,temp ,desc,icon){
 wind.innerHTML=airspeed + "km/h"
