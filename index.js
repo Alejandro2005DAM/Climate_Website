@@ -53,7 +53,7 @@ inputext.addEventListener("input",(e)=>{
           inputext.style.backgroundColor="red"
     }else{
         
-        inputext.style.backgroundColor("rgb(143, 25, 108)")
+        inputext.style.backgroundColor="rgb(143, 25, 108)"
             
       
     }
