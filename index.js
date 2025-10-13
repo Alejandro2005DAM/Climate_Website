@@ -49,6 +49,7 @@ inputext.addEventListener("input",(e)=>{
     const value=inputext.value
     const lastchar= value[value.length-1]
     if(lastchar>="0" && lastchar<="9"){
+          e.preventDefault()
           inputext.value=inputext.value.slice(0,-1)
           inputext.style.backgroundColor="red"
     }else{
